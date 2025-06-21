@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Roboto";
+    src:local("Roboto-Regular"),
+      local("Roboto-Regular"),
+      url("Roboto-Regular.woff2") format("woff2"),
+      url("Roboto-Regular.woff") format("woff"),
+      url("Roboto-Regular") format("ttf");
+      font-weight: normal;
+
+  }
+
+  body{
+    font-family:"Roboto", sans-serif;
+    font-size: 10 px;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .fat{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  }
+
+ .title  {
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+    font-style: normal;
+   }
+footer{
+    color: white;
+    background-color: black;
+    margin: 10px;
+    padding: 5px;
+} 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-bottom: 0px solid #ccc;
+}
+.logo {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+.nav-item {
+
+    color: #333;
+}
+
+.intro{
+    height: 630 px;
+    background-color: #D5C9;
+}
+
+.container {
+    max-width: 100%;
+    max-height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('img/background_img.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.content {
+    background-color: #fff;
+    width: 690px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.main-title {
+    font-size: 36px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+.sub-title {
+    font-size: 10px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+  }
+
+  .bio-section {
+    display: flex;
+    max-width: 1440px;
+    height: 840px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.katie {
+    width: 571px;
+    height: auto; 
+    margin: auto; 
+}
+
+.biography {
+   
+    flex-grow: 1;
+}
+
+.bio-content {
+    flex: 0 0 39%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin: 0 20px; 
+}
+
+.title {
+    margin: 0;
+    transform: translateX(5%) rotate(-90deg) ;
+}
+
