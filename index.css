@@ -1,0 +1,357 @@
+@font-face {
+    font-family: "Roboto";
+    src:local("Roboto-Regular"),
+      local("Roboto-Regular"),
+      url("Roboto-Regular.woff2") format("woff2"),
+      url("Roboto-Regular.woff") format("woff"),
+      url("Roboto-Regular") format("ttf");
+      font-weight: normal;
+
+  }
+
+  body{
+    font-family:"Roboto", sans-serif;
+    font-size: 10 px;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .fat{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  }
+
+ .title  {
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+    font-style: normal;
+   }
+footer{
+    color: white;
+    background-color: black;
+    margin: 10px;
+    padding: 5px;
+} 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-bottom: 0px solid #ccc;
+}
+.logo {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+.nav-item {
+
+    color: #333;
+}
+
+.intro{
+    height: 630 px;
+    background-color: #D5C9;
+}
+
+.container {
+    max-width: 100%;
+    max-height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('img/background_img.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.content {
+    background-color: #fff;
+    width: 690px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.main-title {
+    font-size: 36px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+.sub-title {
+    font-size: 10px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+  }
+
+  .bio-section {
+    display: flex;
+    max-width: 1440px;
+    height: 840px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.katie {
+    width: 571px;
+    height: auto; 
+    margin: auto; 
+}
+
+.biography {
+   
+    flex-grow: 1;
+}
+
+.bio-content {
+    flex: 0 0 39%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin: 0 20px; 
+}
+
+.title {
+    margin: 0;
+    transform: translateX(5%) rotate(-90deg) ;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: #fff;
+    color: #000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    align-items: start;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    gap: 40px;
+}
+
+.rotate-block {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    height: 220px; /* чтобы все блоки были одинаковой высоты */
+}
+
+.rotate-block h3,
+.rotate-block a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.quote-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-heading {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+blockquote {
+    font-family: 'Bitter', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 30px 0;
+}
+
+.quote-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* 🔻 Responsive Fix: заголовок не налезает на изображение */
+@media screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "text image"
+            "text quote";
+    }
+
+    .quote-column {
+        align-items: flex-start;
+    }
+
+    .testimonial-heading {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+.designers-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.designers-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.designers-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.designer-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.designer-card.large img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* квадратное изображение */
+    object-fit: cover;
+}
+
+.designer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.designer-card h3 {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.designer-card p {
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+.strong-points-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.strong-points-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.strong-points-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 30px;
+    align-items: start;
+    overflow-x: auto;
+}
+
+.strong-points-grid img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.strengths-list h3 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: serif;
+    margin-bottom: 20px;
+}
+
+.strengths-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.strengths-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+}
+
+.designer-card.large {
+    transform: scale(1.15);
+    transform-origin: center;
+    z-index: 1; 
+}
+
+.designer-card.large {
+    margin-right: 10px;
+}
+
+
+.designer-card.large {
+    min-width: 280px;
+    max-width: 320px;
+}
