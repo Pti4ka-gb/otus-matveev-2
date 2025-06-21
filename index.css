@@ -68,10 +68,10 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-image: url('../../Downloads/a4802af631ee4e02a8c754e8f5a375a73f9e93f0 (1).jpg'); /* Путь к вашему изображению */
-    background-size: cover; /* Обеспечивает полное покрытие */
-    background-repeat: no-repeat; /* Запрещает повторение изображения */
-    background-position: center; /* Центрирует изображение */
+    background-image: url('img/background_img.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
 }
 
 .content {
@@ -131,49 +131,7 @@ a {
     transform: translateX(5%) rotate(-90deg) ;
 }
 
-/*.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 451px; 
-    grid-template-rows: repeat(3, auto); 
-    gap: 20px;
-    padding: 20px;
-    height: 100vh;
-    margin: 20px;
-}
 
-.text-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.image {
-    width: 100%;
-    height: 760px; 
-}
-
-.quote-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 221px; 
-}
-
-.rotate-90 {
-    transform: rotate(-90deg);
-    transform-origin: left bottom; 
-    display: inline-block;
-    margin: 10px 0; 
-}
-
-blockquote {
-    margin: 20px 0;
-}
-
-.quote-image {
-    width: 221px; 
-    height: 333px; 
-}*/
 
 
 .grid-container {
@@ -297,4 +255,54 @@ blockquote {
 .designer-card p {
     margin: 2px 0;
     font-size: 13px;
+}
+
+.strong-points-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.strong-points-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.strong-points-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 30px;
+    align-items: start;
+    overflow-x: auto;
+}
+
+.strong-points-grid img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.strengths-list h3 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: serif;
+    margin-bottom: 20px;
+}
+
+.strengths-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.strengths-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
 }
