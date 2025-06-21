@@ -243,3 +243,58 @@ blockquote {
     height: auto;
     border-radius: 5px;
 }
+
+
+
+
+.designers-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.designers-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.designers-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.designer-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.designer-card.large img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* квадратное изображение */
+    object-fit: cover;
+}
+
+.designer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.designer-card h3 {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.designer-card p {
+    margin: 2px 0;
+    font-size: 13px;
+}
