@@ -290,7 +290,7 @@ blockquote {
 .designer-card.large img {
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1; /* квадратное изображение */
+    aspect-ratio: 1 / 1; 
     object-fit: cover;
 }
 
