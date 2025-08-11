@@ -313,55 +313,8 @@ blockquote {
     font-size: 13px;
 }
 
-.strong-points-section {
-    padding: 40px;
-    overflow-x: auto;
-}
 
-.strong-points-section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
 
-.strong-points-grid {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: min-content;
-    gap: 30px;
-    align-items: start;
-    overflow-x: auto;
-}
-
-.strong-points-grid img {
-    width: 250px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.strengths-list {
-    min-width: 200px;
-    max-width: 250px;
-}
-
-.strengths-list h3 {
-    font-size: 36px;
-    font-weight: 700;
-    font-family: serif;
-    margin-bottom: 20px;
-}
-
-.strengths-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.strengths-list li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-family: Georgia, serif;
-}
 
 .designer-card.large {
     transform: scale(1.15);
@@ -379,3 +332,88 @@ blockquote {
     max-width: 320px;
 }
 
+.strong-points-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.strong-points-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 10px; /* сдвиг вправо */
+}
+
+.strong-points-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 30px;
+    align-items: start;
+    overflow-x: auto;
+}
+
+@supports not (display: grid) {
+    .strong-points-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+    }
+}
+
+.strong-points-grid img {
+    width: 250px;
+    height: 300px; /* фиксируем высоту */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.strengths-list h3 {
+    font-size: 42px; /* больше, чем было */
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.strengths-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+}
+
+.strengths-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Дополнительно выравниваем все элементы по верху */
+.strong-points-grid > * {
+    align-self: start;
+}
+.strong-points-grid img {
+    width: 250px;
+    height: 400px; 
+    object-fit: cover;
+    object-position: top; 
+    border-radius: 4px;
+}
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -25px; /* поднимаем блок выше */
+}
