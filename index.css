@@ -417,3 +417,146 @@ blockquote {
     justify-content: flex-start;
     margin-top: -25px; /* поднимаем блок выше */
 }
+
+/* Базовая резиновость для всех экранов */
+body {
+    overflow-x: hidden; /* защита от случайного выезда элементов */
+}
+
+.container,
+.bio-section,
+.designers-section,
+.strong-points-section {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Адаптация под планшеты (примерно 768px - 1024px) */
+@media (max-width: 1024px) {
+    
+    /* Убираем фиксированные размеры, делаем резиновыми */
+    .bio-section {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+    }
+
+    .katie {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .bio-content {
+        padding-left: 20px;
+        flex: 1 1 100%;
+    }
+
+    /* Сетка для testimonials и картинок */
+    .grid-container {
+        grid-template-columns: 80px 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Секция дизайнеров */
+    .designers-grid {
+        gap: 15px;
+    }
+
+    .designer-card.large {
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    /* Секция strong points */
+    .strong-points-grid img {
+        width: 200px;
+        height: auto;
+    }
+
+    .strengths-list {
+        margin-top: 0;
+        min-width: 180px;
+    }
+}
+
+/* Для экранов ближе к мобильным (меньше 768px) */
+@media (max-width: 768px) {
+
+    .bio-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-content {
+        padding-left: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-heading {
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin: 0;
+    }
+
+    .strong-points-grid {
+        grid-auto-columns: 180px;
+    }
+
+    .strong-points-grid img {
+        width: 180px;
+    }
+}
+
+/* Десктоп — оставляем как было */
+.biography {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+/* Планшеты и меньше — убираем абсолют и ротацию */
+@media (max-width: 1024px) {
+    .biography {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+.text-column .rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin-bottom: 50px; /* было 30px, увеличим для запаса */
+}
+
+/* Мобильные — убираем вертикальную ориентацию и ставим горизонтально с отступами */
+@media (max-width: 768px) {
+    .text-column .rotate {
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .text-column a {
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
