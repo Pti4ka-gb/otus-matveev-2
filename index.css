@@ -1,0 +1,562 @@
+@font-face {
+    font-family: "Roboto";
+    src:local("Roboto-Regular"),
+      local("Roboto-Regular"),
+      url("Roboto-Regular.woff2") format("woff2"),
+      url("Roboto-Regular.woff") format("woff"),
+      url("Roboto-Regular") format("ttf");
+      font-weight: normal;
+
+  }
+
+  body{
+    font-family:"Roboto", sans-serif;
+    font-size: 10 px;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .fat{
+  font-weight: 400;
+  font-size: 50px;
+  }
+
+ .title  {
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+    font-style: normal;
+   }
+footer{
+    color: white;
+    background-color: black;
+    margin: 10px;
+    padding: 5px;
+} 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-bottom: 0px solid #ccc;
+}
+.logo {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+.nav-item {
+
+    color: #333;
+}
+
+.intro{
+    height: 630 px;
+    background-color: #D5C9;
+}
+
+.container {
+    max-width: 100%;
+    max-height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('img/background_img.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.content {
+    background-color: #fff;
+    width: 690px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.main-title {
+    font-size: 36px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+.sub-title {
+    font-size: 10px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+  }
+
+
+
+.bio-section {
+    position: relative;
+    display: flex;
+    max-width: 1440px;
+    height: 840px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.katie {
+    width: 571px;
+    height: auto;
+    margin: auto;
+}
+
+.biography {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.bio-content {
+    flex: 0 0 39%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+
+.fat {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+
+.bio-content p,
+.bio-content strong {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+
+blockquote {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-style: italic; /
+}
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: #fff;
+    color: #000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr minmax(200px, 1fr); 
+    gap: 20px;
+    padding: 40px;
+    align-items: start;
+    overflow: hidden; 
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.text-column .rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.text-column h3,
+.text-column a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.rotate_link {
+    transform: translateY(50%);
+}
+
+.rotate_text_website {
+    transform: translateY(-58%);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 600px;
+    border-radius: 5px;
+    margin-right: 20px; 
+}
+
+.quote-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-width: 0; 
+}
+
+.quote_testimonials {
+    font-family: "Bitter", serif; 
+    font-weight: 400;
+    font-style: italic;
+}
+
+.testimonial-heading {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: -20px; 
+    white-space: nowrap; 
+    max-height: 100%; 
+}
+
+blockquote {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 30px 0;
+    max-width: 100%; 
+    overflow: hidden; 
+}
+
+.quote-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+
+.designers-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.designers-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.designers-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.designer-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.designer-card.large img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+}
+
+.designer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.designer-card h3 {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.designer-card p {
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+
+
+
+.designer-card.large {
+    transform: scale(1.15);
+    transform-origin: center;
+    z-index: 1; 
+}
+
+.designer-card.large {
+    margin-right: 10px;
+}
+
+
+.designer-card.large {
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.strong-points-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.strong-points-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 10px; /* сдвиг вправо */
+}
+
+.strong-points-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 30px;
+    align-items: start;
+    overflow-x: auto;
+}
+
+@supports not (display: grid) {
+    .strong-points-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+    }
+}
+
+.strong-points-grid img {
+    width: 250px;
+    height: 300px; /* фиксируем высоту */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.strengths-list h3 {
+    font-size: 42px; /* больше, чем было */
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.strengths-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+}
+
+.strengths-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Дополнительно выравниваем все элементы по верху */
+.strong-points-grid > * {
+    align-self: start;
+}
+.strong-points-grid img {
+    width: 250px;
+    height: 400px; 
+    object-fit: cover;
+    object-position: top; 
+    border-radius: 4px;
+}
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -25px; /* поднимаем блок выше */
+}
+
+/* Базовая резиновость для всех экранов */
+body {
+    overflow-x: hidden; /* защита от случайного выезда элементов */
+}
+
+.container,
+.bio-section,
+.designers-section,
+.strong-points-section {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Адаптация под планшеты (примерно 768px - 1024px) */
+@media (max-width: 1024px) {
+    
+    /* Убираем фиксированные размеры, делаем резиновыми */
+    .bio-section {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+    }
+
+    .katie {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .bio-content {
+        padding-left: 20px;
+        flex: 1 1 100%;
+    }
+
+    /* Сетка для testimonials и картинок */
+    .grid-container {
+        grid-template-columns: 80px 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Секция дизайнеров */
+    .designers-grid {
+        gap: 15px;
+    }
+
+    .designer-card.large {
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    /* Секция strong points */
+    .strong-points-grid img {
+        width: 200px;
+        height: auto;
+    }
+
+    .strengths-list {
+        margin-top: 0;
+        min-width: 180px;
+    }
+}
+
+/* Для экранов ближе к мобильным (меньше 768px) */
+@media (max-width: 768px) {
+
+    .bio-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-content {
+        padding-left: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-heading {
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin: 0;
+    }
+
+    .strong-points-grid {
+        grid-auto-columns: 180px;
+    }
+
+    .strong-points-grid img {
+        width: 180px;
+    }
+}
+
+/* Десктоп — оставляем как было */
+.biography {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+/* Планшеты и меньше — убираем абсолют и ротацию */
+@media (max-width: 1024px) {
+    .biography {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+.text-column .rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin-bottom: 50px; /* было 30px, увеличим для запаса */
+}
+
+/* Мобильные — убираем вертикальную ориентацию и ставим горизонтально с отступами */
+@media (max-width: 768px) {
+    .text-column .rotate {
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .text-column a {
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
