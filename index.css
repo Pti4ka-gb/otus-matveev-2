@@ -1,0 +1,733 @@
+@font-face {
+    font-family: "Roboto";
+    src:local("Roboto-Regular"),
+      local("Roboto-Regular"),
+      url("Roboto-Regular.woff2") format("woff2"),
+      url("Roboto-Regular.woff") format("woff"),
+      url("Roboto-Regular") format("ttf");
+      font-weight: normal;
+
+  }
+
+  body{
+    font-family:"Roboto", sans-serif;
+    font-size: 10 px;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .fat{
+  font-weight: 400;
+  font-size: 50px;
+  }
+
+ .title  {
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+    font-style: normal;
+   }
+footer{
+    color: white;
+    background-color: black;
+    margin: 10px;
+    padding: 5px;
+} 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-bottom: 0px solid #ccc;
+}
+.logo {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+.nav-item {
+
+    color: #333;
+}
+
+.intro{
+    height: 630 px;
+    background-color: #D5C9;
+}
+
+.container {
+    max-width: 100%;
+    max-height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('img/background_img.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.content {
+    background-color: #fff;
+    width: 690px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.main-title {
+    font-size: 36px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+.sub-title {
+    font-size: 10px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+  }
+
+
+
+.bio-section {
+    position: relative;
+    display: flex;
+    max-width: 1440px;
+    height: 840px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.katie {
+    width: 571px;
+    height: auto;
+    margin: auto;
+}
+
+.biography {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.bio-content {
+    flex: 0 0 39%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+
+.fat {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+
+.bio-content p,
+.bio-content strong {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+
+blockquote {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-style: italic; /
+}
+
+@media (max-width: 768px) {
+  .bio-section {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 20px;
+  }
+
+  .katie {
+    order: 3; /* картинка внизу */
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .biography {
+    position: static;
+    order: 2;
+    transform: none;
+    font-size: 16px;
+    margin-left: auto; 
+    margin-top: -270px; 
+   
+   
+  }
+
+  .bio-content {
+    order: 1;
+    flex: none;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+
+  .bio-content h1.fat {
+    order: 3;
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .bio-content p,
+  .bio-content strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  blockquote {
+    order: 2;
+    font-size: 16px;
+    margin: 15px 0;
+  }
+}
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: #fff;
+    color: #000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr minmax(200px, 1fr); 
+    gap: 20px;
+    padding: 40px;
+    align-items: start;
+    overflow: hidden; 
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.text-column .rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.text-column h3,
+.text-column a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.rotate_link {
+    transform: translateY(50%);
+}
+
+.rotate_text_website {
+    transform: translateY(-58%);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 600px;
+    border-radius: 5px;
+    margin-right: 20px; 
+}
+
+.quote-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-width: 0; 
+}
+
+.quote_testimonials {
+    font-family: "Bitter", serif; 
+    font-weight: 400;
+    font-style: italic;
+}
+
+.testimonial-heading {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: -20px; 
+    white-space: nowrap; 
+    max-height: 100%; 
+}
+
+blockquote {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 30px 0;
+    max-width: 100%; 
+    overflow: hidden; 
+}
+
+.quote-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  /* Убираем фото cafe */
+  .image {
+    display: none;
+  }
+
+  /* Перестраиваем контейнер */
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Testimonials вверху справа */
+  .testimonial-heading {
+    writing-mode: horizontal-tb;
+    transform: none;
+    align-self: flex-end;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+  }
+
+  /* Цитата по центру */
+  .quote_testimonials {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+
+  /* Фото person with package на всю ширину */
+  .quote-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  /* Сетка ссылок и текстов внизу */
+  .text-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    order: 3;
+    height: auto;
+  }
+
+  /* Весь текст вертикально */
+  .text-column .rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin: 0;
+  }
+
+  /* Расположение по ячейкам */
+  .text-website {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .text-creativity-middle {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .text-creativity-bottom {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+
+
+.designers-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.designers-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.designers-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.designer-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.designer-card.large img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+}
+
+.designer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.designer-card h3 {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.designer-card p {
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+.designer-card.large {
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.strong-points-section {
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.strong-points-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 10px; /* сдвиг вправо */
+}
+
+.strong-points-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 30px;
+    align-items: start;
+    overflow-x: auto;
+}
+
+@supports not (display: grid) {
+    .strong-points-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+    }
+}
+
+.strong-points-grid img {
+    width: 250px;
+    height: 300px; /* фиксируем высоту */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.strengths-list h3 {
+    font-size: 42px; /* больше, чем было */
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.strengths-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+}
+
+.strengths-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Дополнительно выравниваем все элементы по верху */
+.strong-points-grid > * {
+    align-self: start;
+}
+.strong-points-grid img {
+    width: 250px;
+    height: 400px; 
+    object-fit: cover;
+    object-position: top; 
+    border-radius: 4px;
+}
+.strengths-list {
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -25px; 
+}
+
+/* ==== Мобильная адаптация strong-points ==== */
+@media (max-width: 768px) {
+  .strong-points-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  /* Ставим strengths-list первым слева */
+  .strengths-list {
+    order: -1; /* переносим блок в начало */
+    margin-top: 0;
+    flex-shrink: 0; /* чтобы текст не сжимался */
+  }
+
+  /* Группа картинок справа в линию */
+  .strong-points-grid img {
+    flex-shrink: 0;
+  }
+
+  /* Чтобы картинки были в отдельном горизонтальном контейнере */
+  .strong-points-grid {
+    overflow-x: auto;
+    align-items: flex-start;
+  }
+}
+
+
+.biography {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+/*@media (min-width:600px){
+    
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+.header {
+  flex-wrap: wrap;
+  padding: 2vw;
+}
+.logo {
+  font-size: clamp(18px, 2.5vw, 24px);
+}
+.nav {
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.nav-item {
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+
+.container {
+  max-width: 100%;
+  height: auto;
+  padding: 5vw 2vw;
+  background-size: cover;
+}
+.content {
+  width: 90%;
+  max-width: 690px;
+  height: auto;
+  padding: 5%;
+}
+.main-title {
+  font-size: clamp(20px, 4vw, 36px);
+}
+.sub-title {
+  font-size: clamp(10px, 1.2vw, 14px);
+}
+
+
+.bio-section {
+  flex-wrap: wrap;
+  height: auto;
+  padding: 2vw;
+}
+.katie {
+  max-width: 100%;
+  height: auto;
+}
+.biography {
+  position: static;
+  transform: none;
+  margin-top: 1rem;
+  text-align: center;
+}
+.bio-content {
+  padding-left: 0;
+  flex: 1 1 300px;
+}
+.fat {
+  font-size: clamp(28px, 5vw, 50px);
+}
+
+
+.designers-grid {
+  grid-auto-columns: minmax(180px, 25vw);
+}
+.designer-card.large {
+  min-width: 200px;
+  max-width: 280px;
+}
+
+
+.grid-container {
+  grid-template-columns: minmax(60px, 80px) 1fr minmax(200px, 25%);
+  padding: 4vw;
+  gap: 2vw;
+}
+.image {
+  max-width: 100%;
+}
+.quote-column {
+  max-width: 100%;
+}
+.testimonial-heading {
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+blockquote {
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+
+.strong-points-grid {
+  grid-auto-columns: minmax(200px, 25vw);
+}
+.strong-points-grid img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+.strengths-list {
+  margin-top: 0;
+  max-width: 250px;
+}
+
+
+footer {
+  font-size: clamp(12px, 1.5vw, 14px);
+  text-align: center;
+}
+}
+.biography {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg) translateY(35%);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  white-space: nowrap;
+  margin-right: 20px;
+  position: relative; 
+}
+
+@media (max-width: 1024px) {
+  .designers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /
+  }
+  .designer-card.large {
+    transform: none;
+  }
+ 
+}
+
+.text-column a {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1024px) {
+  .text-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px; 
+  }
+  .text-column .rotate {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: left;
+  }
+}*/
