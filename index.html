@@ -13,19 +13,26 @@
   <title>Mod</title>
   </head>
     <body>
+<header>
+    <div class="header">
+        <div class="logo">Mod</div>
+        <nav class="nav">
+            <a href="#" class="nav-item">Biography</a>
+            <a href="#" class="nav-item">Designers</a>
+            <a href="#" class="nav-item">Testimonials</a>
+            <a href="#" class="nav-item">Strong points</a>
+        </nav>
+        <button type="button" class="modal-btn" onclick="window['modal'].showModal();">Open</button>
+    </div>
+</header>
 
-    <header>
-        <div class="header">
-            <div class="logo">Mod</div>
-            <nav class="nav">
-                <a href="#" class="nav-item">Biography</a>
-                <a href="#" class="nav-item">Designers</a>
-                <a href="#" class="nav-item">Testimonials</a>
-                <a href="#" class="nav-item">Strong points</a>
-            </nav>
-        </div>
-    </header>
-    
+<dialog class="modal" id="modal">
+    <h2>Hi, I am modal</h2>
+    <form method="dialog">
+        <button>Close</button>
+    </form>
+</dialog>
+</dialog>
     <main>
         <div class="container">
             <div class="content">
@@ -40,7 +47,7 @@
                 <p class="title">Biography</p>
             </div>
             <div class="bio-content"> 
-                <h1 class="fat">Katya<br> Mills</h1>
+                <h1 class="fat">Katie<br> Mills</h1>
                 <p>Art Director</p>
                 <strong>Scenography / Styling / Creative Photography / Design</strong>
                 <blockquote>

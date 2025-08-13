@@ -119,7 +119,7 @@ a {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    transform: translateY(-500%) translateX(580%) rotate(-90deg);
     font-family: "Roboto", sans-serif; 
     font-weight: 700;
     font-size: 22px;
@@ -155,59 +155,7 @@ blockquote {
     font-style: italic; /
 }
 
-@media (max-width: 768px) {
-  .bio-section {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 20px;
-  }
 
-  .katie {
-    order: 3; /* картинка внизу */
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
-
-  .biography {
-    position: static;
-    order: 2;
-    transform: none;
-    font-size: 16px;
-    margin-left: auto; 
-    margin-top: -270px; 
-   
-   
-  }
-
-  .bio-content {
-    order: 1;
-    flex: none;
-    width: 100%;
-    padding: 0;
-    text-align: left;
-  }
-
-  .bio-content h1.fat {
-    order: 3;
-    font-size: 28px;
-    margin-top: 20px;
-  }
-
-  .bio-content p,
-  .bio-content strong {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  blockquote {
-    order: 2;
-    font-size: 16px;
-    margin: 15px 0;
-  }
-}
 
 
 
@@ -310,78 +258,6 @@ blockquote {
     border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-  /* Убираем фото cafe */
-  .image {
-    display: none;
-  }
-
-  /* Перестраиваем контейнер */
-  .grid-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  /* Testimonials вверху справа */
-  .testimonial-heading {
-    writing-mode: horizontal-tb;
-    transform: none;
-    align-self: flex-end;
-    margin: 0 0 10px 0;
-    font-size: 14px;
-  }
-
-  /* Цитата по центру */
-  .quote_testimonials {
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
-    margin: 0 auto 20px auto;
-  }
-
-  /* Фото person with package на всю ширину */
-  .quote-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  /* Сетка ссылок и текстов внизу */
-  .text-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    order: 3;
-    height: auto;
-  }
-
-  /* Весь текст вертикально */
-  .text-column .rotate {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    text-align: right;
-    margin: 0;
-  }
-
-  /* Расположение по ячейкам */
-  .text-website {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .text-creativity-middle {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .text-creativity-bottom {
-    grid-column: 2;
-    grid-row: 1;
-  }
-}
 
 
 
@@ -440,9 +316,15 @@ blockquote {
 
 
 
+.designer-card.large {
+    transform: scale(1.15);
+    transform-origin: center;
+    z-index: 1; 
+}
 
-
-
+.designer-card.large {
+    margin-right: 10px;
+}
 
 
 .designer-card.large {
@@ -460,7 +342,7 @@ blockquote {
     font-weight: 700;
     font-size: 24px;
     margin-bottom: 20px;
-    margin-left: 10px; /* сдвиг вправо */
+    margin-left: 10px; 
 }
 
 .strong-points-grid {
@@ -483,7 +365,7 @@ blockquote {
 
 .strong-points-grid img {
     width: 250px;
-    height: 300px; /* фиксируем высоту */
+    height: 300px;
     object-fit: cover;
     border-radius: 4px;
 }
@@ -497,7 +379,7 @@ blockquote {
 }
 
 .strengths-list h3 {
-    font-size: 42px; /* больше, чем было */
+    font-size: 42px; 
     font-weight: 500;
     font-family: 'Playfair Display', serif;
     margin-bottom: 20px;
@@ -516,7 +398,7 @@ blockquote {
     margin-bottom: 10px;
 }
 
-/* Дополнительно выравниваем все элементы по верху */
+
 .strong-points-grid > * {
     align-self: start;
 }
@@ -536,31 +418,104 @@ blockquote {
     margin-top: -25px; 
 }
 
-/* ==== Мобильная адаптация strong-points ==== */
+
+body {
+    overflow-x: hidden; 
+}
+
+.container,
+.bio-section,
+.designers-section,
+.strong-points-section {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 1024px) {
+    
+   
+    .bio-section {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+    }
+
+    .katie {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .bio-content {
+        padding-left: 20px;
+        flex: 1 1 100%;
+    }
+
+    
+    .grid-container {
+        grid-template-columns: 80px 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Секция дизайнеров */
+    .designers-grid {
+        gap: 15px;
+    }
+
+    .designer-card.large {
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    /* Секция strong points */
+    .strong-points-grid img {
+        width: 200px;
+        height: auto;
+    }
+
+    .strengths-list {
+        margin-top: 0;
+        min-width: 180px;
+    }
+}
+
+
 @media (max-width: 768px) {
-  .strong-points-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
 
-  /* Ставим strengths-list первым слева */
-  .strengths-list {
-    order: -1; /* переносим блок в начало */
-    margin-top: 0;
-    flex-shrink: 0; /* чтобы текст не сжимался */
-  }
+    .bio-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  /* Группа картинок справа в линию */
-  .strong-points-grid img {
-    flex-shrink: 0;
-  }
+    .bio-content {
+        padding-left: 0;
+    }
 
-  /* Чтобы картинки были в отдельном горизонтальном контейнере */
-  .strong-points-grid {
-    overflow-x: auto;
-    align-items: flex-start;
-  }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-heading {
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin: 0;
+    }
+
+    .strong-points-grid {
+        grid-auto-columns: 180px;
+    }
+
+    .strong-points-grid img {
+        width: 180px;
+    }
 }
 
 
@@ -568,166 +523,128 @@ blockquote {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    transform: translateY(-500%) translateX(610%) rotate(-90deg);
     font-family: "Roboto", sans-serif; 
     font-weight: 700;
     font-size: 22px;
     white-space: nowrap;
 }
 
-/*@media (min-width:600px){
-    
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+@media (max-width: 1024px) {
+    .biography {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+.text-column .rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin-bottom: 50px; 
+}
+
+@media (max-width: 768px) {
+    .text-column .rotate {
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .text-column a {
+        display: inline-block;
+        margin-top: 5px;
+    }
 }
 
 
-.header {
-  flex-wrap: wrap;
-  padding: 2vw;
+.header .nav {
+    margin-right: auto;
 }
-.logo {
-  font-size: clamp(18px, 2.5vw, 24px);
+
+
+.open-dialog-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
+.open-dialog-btn:hover {
+    background-color: #555;
+}
+
+
+#menuDialog {
+    width: 500px;
+    height: 600px;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none;
+}
+
+
+#dialog-toggle:checked ~ #menuDialog {
+    display: block;
+}
+
+
+.close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.close-btn:hover {
+    background: #555;
+}
+
+/* Кнопка справа в хедере */
+.modal-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-btn:hover {
+    background-color: #555;
+}
+
+
 .nav {
-  flex-wrap: wrap;
-  gap: 2vw;
-}
-.nav-item {
-  font-size: clamp(12px, 1.5vw, 16px);
+    margin-right: auto; 
 }
 
 
-.container {
-  max-width: 100%;
-  height: auto;
-  padding: 5vw 2vw;
-  background-size: cover;
-}
-.content {
-  width: 90%;
-  max-width: 690px;
-  height: auto;
-  padding: 5%;
-}
-.main-title {
-  font-size: clamp(20px, 4vw, 36px);
-}
-.sub-title {
-  font-size: clamp(10px, 1.2vw, 14px);
+.modal {
+    width: 500px;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
 }
 
-
-.bio-section {
-  flex-wrap: wrap;
-  height: auto;
-  padding: 2vw;
-}
-.katie {
-  max-width: 100%;
-  height: auto;
-}
-.biography {
-  position: static;
-  transform: none;
-  margin-top: 1rem;
-  text-align: center;
-}
-.bio-content {
-  padding-left: 0;
-  flex: 1 1 300px;
-}
-.fat {
-  font-size: clamp(28px, 5vw, 50px);
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
 }
 
-
-.designers-grid {
-  grid-auto-columns: minmax(180px, 25vw);
+.modal[open] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.designer-card.large {
-  min-width: 200px;
-  max-width: 280px;
-}
-
-
-.grid-container {
-  grid-template-columns: minmax(60px, 80px) 1fr minmax(200px, 25%);
-  padding: 4vw;
-  gap: 2vw;
-}
-.image {
-  max-width: 100%;
-}
-.quote-column {
-  max-width: 100%;
-}
-.testimonial-heading {
-  font-size: clamp(12px, 1.5vw, 16px);
-}
-blockquote {
-  font-size: clamp(14px, 2vw, 20px);
-}
-
-
-.strong-points-grid {
-  grid-auto-columns: minmax(200px, 25vw);
-}
-.strong-points-grid img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-}
-.strengths-list {
-  margin-top: 0;
-  max-width: 250px;
-}
-
-
-footer {
-  font-size: clamp(12px, 1.5vw, 14px);
-  text-align: center;
-}
-}
-.biography {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(35%);
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  white-space: nowrap;
-  margin-right: 20px;
-  position: relative; 
-}
-
-@media (max-width: 1024px) {
-  .designers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px; /
-  }
-  .designer-card.large {
-    transform: none;
-  }
- 
-}
-
-.text-column a {
-  word-break: break-all;
-  overflow-wrap: anywhere;
-}
-
-@media (max-width: 1024px) {
-  .text-column {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px; 
-  }
-  .text-column .rotate {
-    writing-mode: horizontal-tb;
-    transform: none;
-    text-align: left;
-  }
-}*/
