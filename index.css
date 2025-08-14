@@ -41,6 +41,14 @@ footer{
     background-color: #f2f2f2;
     border-bottom: 0px solid #ccc;
 }
+
+
+.header .nav {
+    display: flex;
+    gap: 20px;                   /* равное расстояние между пунктами меню */
+    margin-right: -1000px;             
+}
+
 .logo {
     font-size: 24px;
     font-family: "Playfair Display", serif;
@@ -141,6 +149,11 @@ a {
     font-weight: 500;
 }
 
+.bio-section blockquote {
+    font-size: 28px; 
+    margin-left:-5px
+}
+
 
 .bio-content p,
 .bio-content strong {
@@ -161,6 +174,8 @@ blockquote {
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Bitter:ital,wght@0,400;1,400&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -177,6 +192,7 @@ body {
     align-items: start;
     overflow: hidden; 
 }
+
 
 .text-column {
     display: flex;
@@ -198,67 +214,65 @@ body {
     text-decoration: none;
     color: #000;
     font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .rotate_link {
-    transform: translateY(50%);
+    transform: translateY(60%);
 }
 
 .rotate_text_website {
-    transform: translateY(-58%);
+    transform: translateY(-65%);
 }
 
 .image {
-    width: 100%;
-    height: auto;
+    width: 500px; 
+    height: 800px;   
     object-fit: cover;
-    max-width: 600px;
     border-radius: 5px;
     margin-right: 20px; 
+    position: relative;
+    top: -30px; 
 }
+
 
 .quote-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; 
     align-items: center;
     text-align: center;
     min-width: 0; 
+    margin-top: -100px; 
 }
 
 .quote_testimonials {
     font-family: "Bitter", serif; 
     font-weight: 400;
     font-style: italic;
-}
-
-.testimonial-heading {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-    align-self: flex-start;
-    margin-left: -20px; 
-    white-space: nowrap; 
-    max-height: 100%; 
-}
-
-blockquote {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 1.6;
     margin: 30px 0;
     max-width: 100%; 
     overflow: hidden; 
 }
 
-.quote-image {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
+.testimonial-heading {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg) translateY(-80%) translateX(550px);
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    max-height: 100%; 
 }
 
-
+.quote-image {
+    width: 220px;  
+    height: auto;
+    border-radius: 5px;
+    margin-top: -20px; 
+}
 
 
 .designers-section {
@@ -313,7 +327,12 @@ blockquote {
     font-size: 13px;
 }
 
-
+.designers-grid {
+         
+    gap: 20px;              
+    padding-left: 40px;     
+       
+}
 
 
 .designer-card.large {
@@ -345,6 +364,7 @@ blockquote {
     margin-left: 10px; 
 }
 
+/* === Основное оформление (Grid) === */
 .strong-points-grid {
     display: grid;
     grid-auto-flow: column;
@@ -354,19 +374,15 @@ blockquote {
     overflow-x: auto;
 }
 
-@supports not (display: grid) {
-    .strong-points-grid {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-        align-items: flex-start;
-    }
+.strong-points-grid > * {
+    align-self: start;
 }
 
 .strong-points-grid img {
     width: 250px;
-    height: 300px;
+    height: 400px; 
     object-fit: cover;
+    object-position: top; 
     border-radius: 4px;
 }
 
@@ -376,6 +392,7 @@ blockquote {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: -25px; 
 }
 
 .strengths-list h3 {
@@ -399,25 +416,15 @@ blockquote {
 }
 
 
-.strong-points-grid > * {
-    align-self: start;
+@supports not (display: grid) {
+    .strong-points-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+        overflow-x: auto;
+    }
 }
-.strong-points-grid img {
-    width: 250px;
-    height: 400px; 
-    object-fit: cover;
-    object-position: top; 
-    border-radius: 4px;
-}
-.strengths-list {
-    min-width: 200px;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: -25px; 
-}
-
 
 body {
     overflow-x: hidden; 
@@ -609,7 +616,7 @@ body {
     background: #555;
 }
 
-/* Кнопка справа в хедере */
+
 .modal-btn {
     background-color: #333;
     color: white;
@@ -647,4 +654,29 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.modal__form label {
+  font-weight: bold;
+}
+
+.modal__form input,
+.modal__form textarea {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
 }
