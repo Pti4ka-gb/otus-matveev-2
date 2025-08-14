@@ -119,7 +119,7 @@ a {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-500%) translateX(590%) rotate(-90deg);
+    transform: translateY(-500%) translateX(580%) rotate(-90deg);
     font-family: "Roboto", sans-serif; 
     font-weight: 700;
     font-size: 22px;
@@ -161,6 +161,8 @@ blockquote {
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Bitter:ital,wght@0,400;1,400&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -177,6 +179,7 @@ body {
     align-items: start;
     overflow: hidden; 
 }
+
 
 .text-column {
     display: flex;
@@ -198,67 +201,65 @@ body {
     text-decoration: none;
     color: #000;
     font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .rotate_link {
-    transform: translateY(50%);
+    transform: translateY(60%);
 }
 
 .rotate_text_website {
-    transform: translateY(-58%);
+    transform: translateY(-65%);
 }
 
 .image {
-    width: 100%;
-    height: auto;
+    width: 500px; 
+    height: 800px;   
     object-fit: cover;
-    max-width: 600px;
     border-radius: 5px;
     margin-right: 20px; 
+    position: relative;
+    top: -30px; 
 }
+
 
 .quote-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; 
     align-items: center;
     text-align: center;
     min-width: 0; 
+    margin-top: -100px; 
 }
 
 .quote_testimonials {
     font-family: "Bitter", serif; 
     font-weight: 400;
     font-style: italic;
-}
-
-.testimonial-heading {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-    align-self: flex-start;
-    margin-left: -20px; 
-    white-space: nowrap; 
-    max-height: 100%; 
-}
-
-blockquote {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 1.6;
     margin: 30px 0;
     max-width: 100%; 
     overflow: hidden; 
 }
 
-.quote-image {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
+.testimonial-heading {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg) translateY(-80%) translateX(550px);
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    max-height: 100%; 
 }
 
-
+.quote-image {
+    width: 220px;  
+    height: auto;
+    border-radius: 5px;
+    margin-top: -20px; 
+}
 
 
 .designers-section {
@@ -342,9 +343,10 @@ blockquote {
     font-weight: 700;
     font-size: 24px;
     margin-bottom: 20px;
-    margin-left: 10px; /* сдвиг вправо */
+    margin-left: 10px; 
 }
 
+/* === Основное оформление (Grid) === */
 .strong-points-grid {
     display: grid;
     grid-auto-flow: column;
@@ -354,19 +356,15 @@ blockquote {
     overflow-x: auto;
 }
 
-@supports not (display: grid) {
-    .strong-points-grid {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-        align-items: flex-start;
-    }
+.strong-points-grid > * {
+    align-self: start;
 }
 
 .strong-points-grid img {
     width: 250px;
-    height: 300px; /* фиксируем высоту */
+    height: 400px; 
     object-fit: cover;
+    object-position: top; 
     border-radius: 4px;
 }
 
@@ -376,10 +374,11 @@ blockquote {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: -25px; 
 }
 
 .strengths-list h3 {
-    font-size: 42px; /* больше, чем было */
+    font-size: 42px; 
     font-weight: 500;
     font-family: 'Playfair Display', serif;
     margin-bottom: 20px;
@@ -398,22 +397,243 @@ blockquote {
     margin-bottom: 10px;
 }
 
-/* Дополнительно выравниваем все элементы по верху */
-.strong-points-grid > * {
-    align-self: start;
+/* === Фолбэк (если grid не поддерживается) === */
+@supports not (display: grid) {
+    .strong-points-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+        overflow-x: auto;
+    }
 }
-.strong-points-grid img {
-    width: 250px;
-    height: 400px; 
-    object-fit: cover;
-    object-position: top; 
+
+body {
+    overflow-x: hidden; 
+}
+
+.container,
+.bio-section,
+.designers-section,
+.strong-points-section {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 1024px) {
+    
+   
+    .bio-section {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+    }
+
+    .katie {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .bio-content {
+        padding-left: 20px;
+        flex: 1 1 100%;
+    }
+
+    
+    .grid-container {
+        grid-template-columns: 80px 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Секция дизайнеров */
+    .designers-grid {
+        gap: 15px;
+    }
+
+    .designer-card.large {
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    /* Секция strong points */
+    .strong-points-grid img {
+        width: 200px;
+        height: auto;
+    }
+
+    .strengths-list {
+        margin-top: 0;
+        min-width: 180px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .bio-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-content {
+        padding-left: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-heading {
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin: 0;
+    }
+
+    .strong-points-grid {
+        grid-auto-columns: 180px;
+    }
+
+    .strong-points-grid img {
+        width: 180px;
+    }
+}
+
+
+.biography {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-500%) translateX(610%) rotate(-90deg);
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+
+@media (max-width: 1024px) {
+    .biography {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+.text-column .rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin-bottom: 50px; 
+}
+
+@media (max-width: 768px) {
+    .text-column .rotate {
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .text-column a {
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
+
+
+.header .nav {
+    margin-right: auto;
+}
+
+
+.open-dialog-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 16px;
     border-radius: 4px;
+    cursor: pointer;
 }
-.strengths-list {
-    min-width: 200px;
-    max-width: 250px;
+.open-dialog-btn:hover {
+    background-color: #555;
+}
+
+
+#menuDialog {
+    width: 500px;
+    height: 600px;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none;
+}
+
+
+#dialog-toggle:checked ~ #menuDialog {
+    display: block;
+}
+
+
+.close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.close-btn:hover {
+    background: #555;
+}
+
+/* Кнопка справа в хедере */
+.modal-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-btn:hover {
+    background-color: #555;
+}
+
+
+.nav {
+    margin-right: auto; 
+}
+
+
+.modal {
+    width: 500px;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal[open] {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: -25px; /* поднимаем блок выше */
+    justify-content: center;
+    align-items: center;
 }
