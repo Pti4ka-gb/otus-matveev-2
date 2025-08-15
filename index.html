@@ -13,6 +13,11 @@
   <title>Mod</title>
   </head>
     <body>
+<head>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
 <header>
   <div class="header">
     <div class="logo">Mod</div>
@@ -22,7 +27,9 @@
       <a href="#testimonials" class="nav-item">Testimonials</a>
       <a href="#strengths" class="nav-item">Strong points</a>
     </nav>
-    <button type="button" class="modal-btn" onclick="modal.showModal()">Open</button>
+   <button type="button" class="modal-btn" onclick="modal.showModal()">
+  <i class="fa-regular fa-comment-dots"></i>
+</button>
   </div>
 </header>
 
@@ -35,40 +42,51 @@
       Don’t be shy, write to us:
     </p>
 
-    <label for="name">Name</label>
-    <input 
-      type="text" 
-      id="name" 
-      name="name" 
-      minlength="3" 
-      placeholder="3+ Characters" 
-      required
-    >
 
-    
+    <label for="name">Name</label>
+    <div class="input-wrapper">
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        minlength="3" 
+        placeholder="3+ Characters" 
+        required
+      >
+      <i class="fa-solid fa-user"></i>
+    </div>
+
+  
     <label for="email">E-mail</label>
-    <input 
-      type="email" 
-      id="email" 
-      name="email" 
-      placeholder="name@email.com" 
-      required
-    >
+    <div class="input-wrapper">
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="name@email.com" 
+        required
+      >
+      <i class="fa-solid fa-at"></i>
+    </div>
 
     
     <label for="comment">Comment</label>
-    <textarea
-      id="comment" 
-      name="comment" 
-      placeholder="Some text..." 
-      rows="4"
-    ></textarea>
+    <div class="input-wrapper textarea-wrapper">
+      <textarea
+        id="comment" 
+        name="comment" 
+        placeholder="Some text..." 
+        rows="4"
+      ></textarea>
+      <i class="fa-regular fa-comment-dots"></i>
+    </div>
 
-    
     <div class="modal__actions">
-      <button type="button" onclick="modal.close()">Close</button>
-      <button type="reset">Cancel</button>
-      <button type="submit">Send</button>
+      <button type="reset" class="btn-cancel">Cancel</button>
+      <button type="submit" class="btn-send">
+  <i class="fa-solid fa-plus"></i>
+  <span>Send</span>
+</button>
     </div>
   </form>
 </dialog>
@@ -88,14 +106,17 @@
             <div class="bio-content"> 
                 <h1 class="fat">Katie<br> Mills</h1>
                 <p>Art Director</p>
-                <strong>Scenography / Styling / Creative Photography / Design</strong>
-                <blockquote>
-                    “The more I deal with the work
-                        <br>
-                         as something that is my own,<br>
-                          as something that is personal,<br>
-                           the more successful it is.”
-                </blockquote>
+                <strong>Scenography / Styling / Creative Photography / Design</strong><br>
+<div class="bio-icon">
+  <i class="fa-solid fa-minus"></i>
+</div>
+<blockquote>
+    “The more I deal with the work
+    <br>
+     as something that is my own,<br>
+      as something that is personal,<br>
+       the more successful it is.”
+</blockquote>
             </div>  
         </section>
         
