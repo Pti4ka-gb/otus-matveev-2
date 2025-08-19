@@ -422,15 +422,31 @@ body {
 }
 
 
+
 @supports not (display: grid) {
-    .strong-points-grid {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-        align-items: flex-start;
-        overflow-x: auto;
-    }
+  .strong-points-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    overflow-x: auto;
+  }
+
+  .strong-points-grid img {
+    flex: 0 0 250px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .strengths-list {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
+
 
 body {
     overflow-x: hidden; 
@@ -1053,4 +1069,95 @@ body {
 .input-wrapper input:focus + i,
 .input-wrapper textarea:focus + i {
   color: #000;
+}
+
+.footer {
+  background: #111;              
+  color: #fff;                  
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+
+.footer__left a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 4px;
+  transition: color 0.25s ease;
+}
+.footer__left a:hover {
+  color: #aaa;                   
+}
+
+
+.footer__center {
+  text-align: center;
+}
+.footer__center span {
+  font-weight: 700;              
+}
+
+
+.footer__right {
+  text-align: right;
+  font-size: 13px;
+  color: #ccc;
+}
+
+
+a, button, input, textarea {
+  transition: all 0.3s ease;   
+  outline: none;               
+}
+
+
+a:hover,
+a:focus {
+  color: #000;                
+  text-decoration: underline;  
+  transform: scale(1.05);      
+}
+
+
+button:hover,
+button:focus {
+  background-color: #222;
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  transform: scale(1.02);
+}
+
+
+.input-wrapper i,
+.modal-btn i,
+.btn-send i {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.input-wrapper input:focus + i,
+.input-wrapper textarea:focus + i {
+  color: #000;
+  transform: scale(1.2);
+}
+
+button:hover i,
+button:focus i {
+  color: #fff;
+  transform: rotate(15deg);
+}
+
+:root:has(dialog[open]) {
+  overflow: hidden;
 }
