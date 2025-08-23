@@ -1219,13 +1219,13 @@ button:focus i {
 }
 
 @media (max-width: 768px) {
-  /* Убираем фото cafe */
+  
   .image {
     display: none;
   }
 
   
-  /* Testimonials вверху справа */
+  
   .testimonial-heading {
     writing-mode: horizontal-tb;
     transform: none;
@@ -1241,7 +1241,7 @@ button:focus i {
     gap: 20px;
   }
 
-  /* Цитата сверху */
+  
   .quote_testimonials {
     font-size: 22px;
     line-height: 1.5;
@@ -1250,7 +1250,7 @@ button:focus i {
     order: 1;
   }
 
-  /* Фото по центру */
+  
   .quote-image {
     width: 100%;
     height: auto;
@@ -1260,19 +1260,19 @@ button:focus i {
 
 .text-column {
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* две равные колонки */
+    grid-template-columns: 1fr 1fr;   
     gap: 20px;
     justify-items: center;
     width: 100%;
     order: 3;
   }
 
-  /* Website слева */
+  
   .text-website {
     grid-column: 1;
     grid-row: 1;
     text-align: center;
-    justify-self: start;   /* прижать к левому краю */
+    justify-self: start;   
   }
 
   

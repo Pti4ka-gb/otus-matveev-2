@@ -1,0 +1,51 @@
+.bio {
+  position: relative;
+  display: flex;
+  @include container;
+  height: 840px;
+
+  &__image {
+    width: 571px;
+    margin: auto;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-500%) translateX(580%) rotate(-90deg);
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+  }
+
+  &__content {
+    flex: 0 0 39%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 100px;
+
+    &-name {
+      @include title-style(50px, 500);
+    }
+
+    &-role {
+      font-family: $font-roboto;
+      font-weight: 500;
+    }
+
+    &-quote {
+      font-family: $font-bitter;
+      font-size: 28px;
+      font-style: italic;
+    }
+  }
+
+  &__icon {
+    font-size: 30px;
+    color: $color-black;
+  }
+}
