@@ -1,0 +1,17 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin title-style($size, $weight: 500, $family: $font-playfair) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+}
+
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}

@@ -1,0 +1,31 @@
+.testimonials {
+  @include container;
+  padding: 80px 0;
+  text-align: center;
+
+  &__title {
+    @include title-style(32px, 600);
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @extend .grid--2;
+  }
+
+  &__item {
+    background: $color-bg-light;
+    padding: 30px;
+    border-radius: 8px;
+
+    &-text {
+      font-family: $font-bitter;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    &-author {
+      font-family: $font-roboto;
+      font-weight: 500;
+    }
+  }
+}
