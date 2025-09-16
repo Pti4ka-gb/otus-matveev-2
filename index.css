@@ -129,7 +129,7 @@ a {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-500%) translateX(580%) rotate(-90deg);
+    transform: translateY(-500%) translateX(550%) rotate(-90deg);
     font-family: "Roboto", sans-serif; 
     font-weight: 700;
     font-size: 22px;
