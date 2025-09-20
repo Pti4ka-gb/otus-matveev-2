@@ -1,41 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="index.css"> 
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
- 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Playfair+Display:wght@500&family=Bitter:wght@400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <title>Mod studio</title>
-  </head>
-    <body>
-<head>
- 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/6bfbb3dee2.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400">
+  <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-<header>
-  <div class="header">
-    <div class="logo">Mod</div>
-    <nav class="nav">
-      <a href="#bio" class="nav-item">Biography</a>
-      <a href="#designers" class="nav-item">Designers</a>
-      <a href="#testimonials" class="nav-item">Testimonials</a>
-      <a href="#strengths" class="nav-item">Strong points</a>
-    </nav>
-   <button type="button" class="modal-btn" onclick="modal.showModal()">
+<body>
+  <header class="container header"> 
+    <h2 class="header__heading">Mod</h2>
+    <div class="header__nav-container nav-container">
+      <div class="nav-container__nav nav">
+        <nav class="nav__desktop"> 
+          <a href="#biography">Biography</a>
+          <a href="#designers">Designers</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#strong-points">Strong points</a>
+        </nav>
+        <nav class="nav__tablet"> 
+          <a href="#biography">B</a>
+          <a href="#designers">D</a>
+          <a href="#testimonials">T</a>
+          <a href="#strong-points">S</a>
+        </nav>
+         <button type="button" class="modal-btn" onclick="modal.showModal()">
   <i class="fa-regular fa-comment-dots"></i>
-</button>
-  </div>
-</header>
-
-
-<dialog class="modal" id="modal">
+         </button>
+      </div>
+      
+      <dialog class="modal" id="modal">
   <form method="dialog" class="modal__form">
     <h2 class="modal__title">Get in touch</h2>
     <p class="modal__desc">
@@ -91,148 +88,154 @@
     </div>
   </form>
 </dialog>
-    <main>
-        <div class="container">
-            <div class="content">
-                <h1 class="main-title">Mod Studio</h1>
-                <p class="sub-title">Modern Web Studio</p>
-            </div>
-        </div>
-<div class="main-inf">       
-        <section class="bio-section">
-            <img width="571" src="img/katya_mills.jpg" alt="katie_mills" class="katie" />
-            <div class="biography">
-                <p class="title">Biography</p>
-            </div>
-            <div class="bio-content"> 
-                <h1 class="fat">Katya<br> Mills</h1>
-                <p>Art Director</p>
-                <strong>Scenography / Styling / Creative Photography / Design</strong><br>
-<div class="bio-icon">
-  <i class="fa-solid fa-minus"></i>
-</div>
-<blockquote>
-    “The more I deal with the work
-    <br>
-     as something that is my own,<br>
-      as something that is personal,<br>
-       the more successful it is.”
-</blockquote>
-            </div>  
-        </section>
-        
-
-        <section class="designers-section">
-    <h2>Designers</h2>
-    <div class="designers-grid">
-        <div class="designer-card large">
-            <img src="img/jess_wonder.jpg" alt="Jess Wonder">
-            <h3>JESS WONDER</h3>
-            <p><strong>From:</strong> Be more flower</p>
-            <p><strong>Skills:</strong> Design Strategy / Marketing</p>
-        </div>
-
-        <div class="designer-card">
-            <img src="img/kameron_klein.jpg" alt="Kameron Clein">
-            <h3>KAMERON CLEIN</h3>
-            <p><strong>From:</strong> Be more flower</p>
-            <p><strong>Skills:</strong> Design Strategy / Marketing</p>
-        </div>
-
-        <div class="designer-card">
-            <img src="img/louisse_red.jpg" alt="Louisse Red">
-            <h3>LOUISSE RED</h3>
-            <p><strong>From:</strong> Be more flower</p>
-            <p><strong>Skills:</strong> Design Strategy / Marketing</p>
-        </div>
-
-        <div class="designer-card">
-            <img src="img/kameron_klein.jpg" alt="Kameron Clein">
-            <h3>KAMERON CLEIN</h3>
-            <p><strong>From:</strong> Be more flower</p>
-            <p><strong>Skills:</strong> Design Strategy / Marketing</p>
-        </div>
-    </div>
-</section>
-    
-
-    <section class="grid-container">
-        <article class="text-column">
-            <div class="text-website rotate">
-                <h3 class="rotate_text_website">Website</h3>
-                <a href="#" class="rotate_link1">www.whitepapers.com</a>
-            </div>
-           
-            <div class="text-creativity-middle rotate">
-                <h3>Creativity</h3>
-                <a href="#" class="rotate_link" >www.whitepapers.com</a>
-            </div>
-            <div class="text-creativity-bottom rotate">
-                <h3>Creativity</h3>
-                <a href="#" class="rotate_link" >www.whitepapers.com</a>
-            </div>
-        </article>
-
-        <img class="image" src="img/cafe.jpg" alt="Cafe">
-
-        <article class="quote-column">
-            <h2 class="testimonial-heading rotate">Testimonials</h2>
-            <blockquote class="quote_testimonials">
-                "I just really<br>
-                    want to do<br>
-                    good work<br>
-                    and work with<br>
-                    some great<br>
-                    people, people<br>
-                    who challenge<br>
-                    me."
-                
-            </blockquote>
-            <img class="quote-image" src="img/Person with package.jpg" alt="Person with package">
-        </article>
+  </header>
+  <main class="container">
+    <section class="box">
+      <div class="box__text">
+        <h1>Mod Studio</h1>
+        <h3>Modern Web Studio</h3>
+      </div>
+      <div class="box__img-container">
+        <img class="box__img" src="img/ms.jpg" alt="Modern Web Studio">
+      </div>
     </section>
-   <section class="strong-points-section">
-    <h2>Strong points</h2>
-    <div class="strong-points-grid">
-        <img src="img/table_laptop.jpg" alt="Table Laptop">
-        <img src="img/chair.jpg" alt="Chair">
-
-        <div class="strengths-list">
-            <h3>Strengths</h3>
-            <ul>
-                <li>Interiors</li>
-                <li>Outdoors</li>
-                <li>Portraits</li>
-                <li>Styling</li>
-                <li>Events</li>
-                <li>Architecture</li>
-                <li>Design</li>
-                <li>Celebrations</li>
-                <li>Fashion</li>
-                <li>Nature</li>
-            </ul>
+    <section class="biography" id="biography">
+      <div class="biography__img-container">
+        <img class="biography__img" src="img/kat.jpg" alt="Katya Mills">
+      </div>
+      <div class="biography-section biography__section"> 
+        <h4 class="biography-section__title">Biography</h4>
+        <div class="biography-text biography-section__text">
+          <h2 class="biography-text__name">Katya Mills</h2>
+          <div class="biography-desc biography-text__desc">
+            <blockquote class="biography-desc__quote">"The more i deal with the work as something that is my own, as something that is personal, the more successful it is"</blockquote>
+            <div class="biography-desc__text biography-desc-text">
+              <div class="biography-desc-text__desktop">
+                <p><strong>Art Director</strong></p>
+                <p><strong>Scenography / Styling / Creative Photography / Design</strong></p>
+              </div>
+              <div class="biography-desc-text__tablet">
+                <p><strong>Art Director</strong></p>
+                <ul>
+                  <li>-Scenography</li>
+                  <li>-Styling</li>
+                  <li>-Creative Photography</li>
+                  <li>-Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+    <section class="designers" id="designers">
+      <h4 class="designers__title">Designers</h4>
+      <ul class="designers-section">
+        <li class="designers-item designers-section__item">
+          <img class="designers-item__img designers-item__img_big" src="img/j.jpg" alt="Jess Wonder">
+          <div class="designers-item__desc designers-item__desc_big">
+            <p><strong>JESS WONDER</strong></p>
+            <p><strong>From/</strong> Be more flower</p>
+            <p><strong>Skills/</strong> Design Strategy/Marketing</p>
+          </div> 
+        </li>
+        <li class="designers-item designers-section__item">
+          <img class="designers-item__img" src="img/kam.jpg" alt="Kameron Klein">
+          <div class="designers-item__desc">
+            <p><strong>KAMERON CLEIN</strong></p>
+            <p><strong>From/</strong> Be more flower</p>
+            <p><strong>Skills/</strong> Design Strategy/Marketing</p>
+          </div>
+        </li>
+        <li class="designers-item designers-section__item">
+          <img class="designers-item__img" src="img/lou.jpg" alt="Louisse Red">
+          <div class="designers-item__desc">
+            <p><strong>LOUISSE RED</strong></p>
+            <p><strong>From/</strong> Be more flower</p>
+            <p><strong>Skills/</strong> Design Strategy/Marketing</p>
+          </div>
+        </li>
+        <li class="designers-item designers-section__item">
+          <img class="designers-item__img" src="img/kam.jpg" alt="Kameron Klein">
+          <div class="designers-item__desc">
+            <p><strong>KAMERON CLEIN</strong></p>
+            <p><strong>From/</strong> Be more flower</p>
+            <p><strong>Skills/</strong> Design Strategy/Marketing</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-grid">
+        <h4 class="testimonials__title">Testimonials</h4>
+        <div class="testimonials__img-container1">
+          <img class="testimonials__img1" src="img/num.jpg" alt="Numbers">
+        </div>
+        <div class="testimonials__link1">
+          <p><strong>Creativity</strong></p>
+          <a href="https://www.whitepapers.com">www.whitepapers.com</a>
+        </div>
+        <div class="testimonials__link2">
+          <p><strong>Creativity</strong></p>
+          <a href="https://www.whitepapers.com">www.whitepapers.com</a>
+        </div>
+        <div class="testimonials__link3">
+          <p><strong>Website</strong></p>
+          <a href="https://www.whitepapers.com">www.whitepapers.com</a>
+        </div>
+        <blockquote class="testimonials__quote">I just really want to do good work <br/> and work with some great people, people who challenge me. </blockquote>
+        <div class="testimonials__img-container2">
+          <img class="testimonials__img2" src="img/pac.jpg" alt="Bag">
+        </div>
+      </div>
+    </section>
+    <section class="strong-points-section" id="strong-points">
+      <h4 class="strong-points-section__title">Strong points</h4>
+      <div class="strong-points">
+        <div class="strong-points__container">
+          <div class="strong-points__front-container">
+            <div class="strong-points__front-img-container">
+              <img class="strong-points__img1" src="img/table.jpg" alt="Table">
+            </div>
+            <div class="strong-points__front-img-container">
+              <img class="strong-points__img2" src="img/chair.jpg" alt="Chair">
+            </div>
+          </div>
+          <div class="strong-points-list strong-points__list">
+            <p class="strong-points-list__title"><strong>Strengths</strong></p>
+            <ul class="strong-points-list__items">
+              <li>Interiors</li>
+              <li>Outdoors</li>
+              <li>Portraits</li>
+              <li>Styling</li>
+              <li>Events</li>
+              <li>Architecture</li>
+              <li>Design</li>
+              <li>Celebrations</li>
+              <li>Fashion</li>
+              <li>Nature</li>
+            </ul>
+          </div>
+        </div>
+        <div class="strong-points__img-container">
+          <div>
+            <img class="strong-points__img" src="img/num.jpg" alt="Numbers">
+          </div>
 
-        <img src="img/cafe.jpg" alt="Cafe">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container">
+    <div class="footer">
+      <div class="footer__info">
+        <a href="tel:+79211234567">+7 921 123-45-67</a>
+        <a href="mailto:info@modstudio.com">INFO@MODSTUDIO.COM</a>
+        <p class="footer__copyright-tablet"> &copy; 2023 Mod Media.All rights reserved</p>
+      </div>
+      <p>A product of <strong class="mod">MOD</strong></p> 
+      <p class="footer__copyright-desktop"> &copy; 2023 Mod Media.All rights reserved</p>
     </div>
-</section>
-</div>
-    </main>
-    
-<footer class="footer">
-  <div class="footer__left">
-    <a href="tel:+79211234567">+7 921 123-45-67</a><br>
-    <a href="mailto:info@modstudio.com">INFO@MODSTUDIO.COM</a>
-  </div>
-  
-  <div class="footer__center">
-    A product of <span>MOD</span>
-  </div>
-  
-  <div class="footer__right">
-    © 2023 Mod Media. All rights reserved
-  </div>
-</footer>
-    
-    </body>
-    </html>
+  </footer>
+</body>
+</html>
