@@ -403,14 +403,7 @@ button:focus i {
 }
 
 
-@media (max-width: 450px) {
-.box_img{
-    width: 150%;
-    height: 450px;
-    margin-right: -190px;
-    margin-top: 110px;
-}
-}
+
  
 
 /* Mod studio */
@@ -479,6 +472,8 @@ h1 {
     padding-bottom: 25px;
   }
 }
+
+
 h3 {
   font-size: 20px;
 }
@@ -515,7 +510,6 @@ h4 { /* все заголовки категорий*/
   align-items: flex-start;
 }
 
-
 .biography-section__title {
   max-width: 88px;
   margin: 0;
@@ -536,7 +530,6 @@ h4 { /* все заголовки категорий*/
      object-fit: cover;
 }
 
-
 .biography-text {
   margin-left: 54px;
   margin-top: 180px;
@@ -545,6 +538,7 @@ h4 { /* все заголовки категорий*/
   justify-content: flex-start;
   gap: 42px;
 }
+
 
 
 .biography-text__name {
@@ -556,6 +550,23 @@ h4 { /* все заголовки категорий*/
   word-spacing: 200px;
 }
 
+@media (max-width: 768px) {
+  .biography-text__name {
+    max-width: 525px;
+    word-spacing: normal;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 64px;
+  }
+  .biography-text__name::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid black;
+    width: 20px;
+    position: relative;
+    bottom: 20px;
+  }
+}
 .biography-desc-text__desktop {
   font-size: 18px;
 }
@@ -563,7 +574,6 @@ h4 { /* все заголовки категорий*/
 .biography-desc-text__tablet {
   display: none;
 }
-
 
 .biography-text__desc {
   display: flex;
@@ -585,8 +595,6 @@ h4 { /* все заголовки категорий*/
   width: 15px;
   margin-bottom: 20px;
 }
-
-
 
 @media (max-width: 768px) {
   .biography {
@@ -628,24 +636,6 @@ h4 { /* все заголовки категорий*/
     margin-right: 20px;
   }
 
-  .biography-text__name {
-    max-width: 525px;
-    word-spacing: normal;
-    font-family: "Playfair Display";
-    font-weight: 400;
-    font-size: 64px;
-    margin-top: 60px;
-    padding-top: 30px;
-  }
-
-  .biography-text__name::before {
-    content: "";
-    display: inline-block;
-    border: 2px solid black;
-    width: 20px;
-    position: relative;
-    bottom: 20px;
-  }
 
   .biography-desc-text__desktop {
     display: none;
@@ -670,6 +660,9 @@ h4 { /* все заголовки категорий*/
     border: 0;
   }
 }
+
+
+
 /*Designers*/
 .card-size, .designers-item__img {
   height: 440px;
@@ -1048,3 +1041,21 @@ h4 { /* все заголовки категорий*/
     display: contents;
   }
 }
+
+@media (max-width: 450px) {
+.box__img{
+    width: 150%;
+    height: 450px;
+    margin-right: -170px;
+    margin-top: 60px;
+    object-fit: cover;
+    padding-bottom: 40px;
+}
+.box__text{
+  padding-bottom: 100px;
+}
+nav{
+  padding-bottom: 60px;
+}
+}
+
