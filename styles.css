@@ -403,6 +403,16 @@ button:focus i {
 }
 
 
+@media (max-width: 450px) {
+.box_img{
+    width: 150%;
+    height: 450px;
+    margin-right: -190px;
+    margin-top: 110px;
+}
+}
+ 
+
 /* Mod studio */
 h1 {
   font-family: "Playfair Display";
@@ -466,6 +476,7 @@ h1 {
   }
   .box__img {
     width: 100%;
+    padding-bottom: 25px;
   }
 }
 h3 {
@@ -497,38 +508,21 @@ h4 { /* все заголовки категорий*/
   margin: 150px 137px 150px 125px;
 }
 
-@media (max-width: 768px) {
-  .biography {
-    flex-direction: column-reverse;
-    margin: 0 0 80px 0;
-  }
-}
+
 .biography-section {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 
-@media (max-width: 768px) {
-  .biography-section {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 0 auto;
-    margin-top: 80px;
-  }
-}
+
 .biography-section__title {
   max-width: 88px;
   margin: 0;
   transform: rotate(-90deg) translateX(-58px);
 }
 
-@media (max-width: 768px) {
-  .biography-section__title {
-    transform: none;
-    max-width: 100%;
-  }
-}
+
 .biography__img-container {
   min-width: 300px;
   max-width: 570px;
@@ -542,16 +536,7 @@ h4 { /* все заголовки категорий*/
      object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .biography__img-container {
-    max-width: 768px;
-    height: 400px;
-  }
-  .biography__img {
-    height: 100%;
-    aspect-ratio: 1.92;
-  }
-}
+
 .biography-text {
   margin-left: 54px;
   margin-top: 180px;
@@ -561,13 +546,7 @@ h4 { /* все заголовки категорий*/
   gap: 42px;
 }
 
-@media (max-width: 768px) {
-  .biography-text {
-    flex-direction: column-reverse;
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-}
+
 .biography-text__name {
   font-family: "Playfair Display";
   font-weight: 500;
@@ -577,23 +556,6 @@ h4 { /* все заголовки категорий*/
   word-spacing: 200px;
 }
 
-@media (max-width: 768px) {
-  .biography-text__name {
-    max-width: 525px;
-    word-spacing: normal;
-    font-family: "Playfair Display";
-    font-weight: 400;
-    font-size: 64px;
-  }
-  .biography-text__name::before {
-    content: "";
-    display: inline-block;
-    border: 2px solid black;
-    width: 20px;
-    position: relative;
-    bottom: 20px;
-  }
-}
 .biography-desc-text__desktop {
   font-size: 18px;
 }
@@ -602,15 +564,7 @@ h4 { /* все заголовки категорий*/
   display: none;
 }
 
-@media (max-width: 768px) {
-  .biography-desc-text__desktop {
-    display: none;
-  }
-  .biography-desc-text__tablet {
-    display: contents;
-    font-size: 18px;
-  }
-}
+
 .biography-text__desc {
   display: flex;
   flex-direction: column-reverse;
@@ -632,13 +586,85 @@ h4 { /* все заголовки категорий*/
   margin-bottom: 20px;
 }
 
+
+
 @media (max-width: 768px) {
-  .biography-desc__quote {
+  .biography {
+    flex-direction: column-reverse;
+    margin: 0 0 80px 0;
+  }
+
+  .biography-section {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .biography-section__title {
+    transform: none;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .biography__img-container {
+    max-width: 768px;
+    height: 500px;
+  }
+
+  .biography__img {
+    height: 100%;
+    aspect-ratio: 1.92;
+  }
+
+  .biography-text {
+    flex-direction: column-reverse;
+    margin-left: 0px;
+    margin-top: 0px;
+    text-align: left;
+    margin-right: 20px;
+  }
+
+  .biography-text__name {
     max-width: 525px;
+    word-spacing: normal;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 64px;
+    margin-top: 60px;
+    padding-top: 30px;
+  }
+
+  .biography-text__name::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid black;
+    width: 20px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .biography-desc-text__desktop {
+    display: none;
+  }
+
+  .biography-desc-text__tablet {
+    display: contents;
+    font-size: 18px;
+  }
+
+  .biography-desc__quote {
+    max-width: 400px;
     font-family: "Bitter";
     font-weight: 300;
     font-size: 30px;
+    justify-content: flex-start;
+    text-align: left;
   }
+
   .biography-desc__quote::before {
     content: "";
     border: 0;
