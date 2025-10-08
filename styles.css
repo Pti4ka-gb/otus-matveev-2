@@ -469,9 +469,20 @@ h1 {
   }
   .box__img {
     width: 100%;
+    height: 383px;
     padding-bottom: 25px;
   }
 }
+@media (max-width: 468px) {
+  .box__img {
+    width: 125%;
+    height: 383px;
+    margin-right: -25%; }
+    
+    .nav_tablet{
+      margin-left: -25px;
+    }
+  }
 
 
 h3 {
@@ -1041,5 +1052,4 @@ h4 { /* все заголовки категорий*/
     display: contents;
   }
 }
-
 
