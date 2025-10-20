@@ -6,13 +6,14 @@
   <script src="https://kit.fontawesome.com/6bfbb3dee2.js" crossorigin="anonymous"></script>
   <title>Document</title>
   <link rel="stylesheet" href="reset.css">
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Playfair+Display:wght@500;600&family=Bitter:wght@400">-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400">
   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header class="container header"> 
     <h2 class="header__heading">Mod</h2>
+    <!--Page navigation-->
     <div class="header__nav-container nav-container">
       <div class="nav-container__nav nav">
         <nav class="nav__desktop"> 
@@ -26,71 +27,49 @@
           <a href="#designers">D</a>
           <a href="#testimonials">T</a>
           <a href="#strong-points">S</a>
-        <button type="button" class="modal-btn" onclick="modal.showModal()">
-  <i class="fa-regular fa-comment-dots"></i>
-         </button>
         </nav>
-        
       </div>
-      
-      <dialog class="modal" id="modal">
-  <form method="dialog" class="modal__form">
-    <h2 class="modal__title">Get in touch</h2>
-    <p class="modal__desc">
-      Do you have any questions? Have something to say?<br>
-      Don’t be shy, write to us:
-    </p>
-
-
-    <label for="name">Name</label>
-    <div class="input-wrapper">
-      <input 
-        type="text" 
-        id="name" 
-        name="name" 
-        minlength="3" 
-        placeholder="3+ Characters" 
-        required
-      >
-      <i class="fa-solid fa-user"></i>
+      <!-- Popup -->
+      <div class="modal">
+        <button id="modal-wrap" onclick="window.dialog.showModal()"> 
+          <svg class="modal__svg" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.07429 30.5C0.966864 30.5 0.752005 30.5 0.644576 30.3889C0.214859 30.1667 0 29.8333 0 29.3889V10.5C0 4.94444 4.29717 0.5 9.66864 0.5H20.4116C25.783 0.5 30.0802 4.94444 30.0802 10.5V14.9444C30.0802 20.5 25.783 24.9444 20.4116 24.9444H15.3624C10.4206 24.9444 5.58633 26.8333 1.8263 30.2778C1.61144 30.3889 1.28915 30.5 1.07429 30.5ZM15.3624 23.4444C10.3352 23.4444 5.425 25.2581 1.5 28.5679V10.5C1.5 5.72483 5.17284 2 9.66864 2H20.4116C24.9074 2 28.5802 5.72483 28.5802 10.5V14.9444C28.5802 19.7196 24.9074 23.4444 20.4116 23.4444H15.3624ZM11.0294 13.7353C11.7604 13.7353 12.3529 13.1427 12.3529 12.4118C12.3529 11.6808 11.7604 11.0882 11.0294 11.0882C10.2984 11.0882 9.70588 11.6808 9.70588 12.4118C9.70588 13.1427 10.2984 13.7353 11.0294 13.7353ZM16.7647 12.4118C16.7647 13.1427 16.1721 13.7353 15.4412 13.7353C14.7102 13.7353 14.1176 13.1427 14.1176 12.4118C14.1176 11.6808 14.7102 11.0882 15.4412 11.0882C16.1721 11.0882 16.7647 11.6808 16.7647 12.4118ZM19.8529 13.7353C20.5839 13.7353 21.1765 13.1427 21.1765 12.4118C21.1765 11.6808 20.5839 11.0882 19.8529 11.0882C19.122 11.0882 18.5294 11.6808 18.5294 12.4118C18.5294 13.1427 19.122 13.7353 19.8529 13.7353Z" fill="black"/>
+          </svg>
+         
+        </button>
+        <dialog class="dialog">
+          <div class="dialog-container">
+          <div class="dialog__text-container">
+            <h3>Get in touch</h3>
+            <div class="dialog__text">
+              <p>Do you have any questions?Have someting to say?</p>
+              <p>Don't be shy, write to us:</p>
+            </div>
+          </div>
+          <form action="#" method="get">
+          <label class="dialog__name name">
+            <span>Name</span>
+            <input class="name__input" type="text" name="name" placeholder=" 3+ Characters" required>
+          </label>
+          <label class="dialog__email email">
+            <span>E-mail</span>
+            <input class="email__input" type="email" name="email" placeholder=" name@email.com" required>
+          </label>
+          <label class="dialog__comment comment">
+            <span>Comment</span>
+            <textarea class="comment__input" placeholder=" Some text..."></textarea>
+          </label>
+          <button id="modal__cancel" onclick="window.dialog.close()">Cancel</button>
+          <
+          <button id="modal__send" type="submit"><i class="fa-solid fa-plus"></i> Send</button>
+        </form>
+        </div>
+        </dialog>
+      </div>
     </div>
-
-  
-    <label for="email">E-mail</label>
-    <div class="input-wrapper">
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        placeholder="name@email.com" 
-        required
-      >
-      <i class="fa-solid fa-at"></i>
-    </div>
-
-    
-    <label for="comment">Comment</label>
-    <div class="input-wrapper textarea-wrapper">
-      <textarea
-        id="comment" 
-        name="comment" 
-        placeholder="Some text..." 
-        rows="4"
-      ></textarea>
-      <i class="fa-regular fa-comment-dots"></i>
-    </div>
-
-    <div class="modal__actions">
-      <button type="button" class="btn-cancel" onclick="modal.close()">Cancel</button>
-      <button type="submit" class="btn-send">
-  <i class="fa-solid fa-plus"></i>
-  <span>Send</span>
-</button>
-    </div>
-  </form>
-</dialog>
   </header>
   <main class="container">
+    <!--Main picture-->
     <section class="box">
       <div class="box__text">
         <h1>Mod Studio</h1>
@@ -100,6 +79,7 @@
         <img class="box__img" src="img/ms.jpg" alt="Modern Web Studio">
       </div>
     </section>
+    <!--Biography-->
     <section class="biography" id="biography">
       <div class="biography__img-container">
         <img class="biography__img" src="img/kat.jpg" alt="Katya Mills">
@@ -110,6 +90,22 @@
           <h2 class="biography-text__name">Katya Mills</h2>
           <div class="biography-desc biography-text__desc">
             <blockquote class="biography-desc__quote">"The more i deal with the work as something that is my own, as something that is personal, the more successful it is"</blockquote>
+
+            <blockquote class="biography-desc__quote_tablet">
+            "The more I deal with <br/>
+            the work as something that is my own <br/>
+            as something that <br/>
+            is personal, the more successful it is"
+            </blockquote>
+
+            <blockquote class="biography-desc__quote_mobile">
+          "The more I deal with<br>
+           the work as something that is<br>
+          my own,<br>
+          as something that<br>
+            is personal, the more<br>
+             successful it is"
+  </blockquote>
             <div class="biography-desc__text biography-desc-text">
               <div class="biography-desc-text__desktop">
                 <p><strong>Art Director</strong></p>
@@ -129,6 +125,7 @@
         </div>
       </div>
     </section>
+    <!--Designers-->
     <section class="designers" id="designers">
       <h4 class="designers__title">Designers</h4>
       <ul class="designers-section">
@@ -166,6 +163,7 @@
         </li>
       </ul>
     </section>
+    <!-- Testimonials-->
     <section class="testimonials" id="testimonials">
       <div class="testimonials-grid">
         <h4 class="testimonials__title">Testimonials</h4>
@@ -190,6 +188,7 @@
         </div>
       </div>
     </section>
+    <!--Strong points-->
     <section class="strong-points-section" id="strong-points">
       <h4 class="strong-points-section__title">Strong points</h4>
       <div class="strong-points">
@@ -222,11 +221,14 @@
           <div>
             <img class="strong-points__img" src="img/num.jpg" alt="Numbers">
           </div>
-
+          <div>
+            <img class="strong-points__img" src="img/num.jpg" alt="Numbers">
+          </div>
         </div>
       </div>
     </section>
   </main>
+  <!--Footer-->
   <footer class="container">
     <div class="footer">
       <div class="footer__info">
