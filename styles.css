@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+
+
 body {
   line-height: 1;
 }
@@ -53,7 +55,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+.box__img__mobile{
+  display: none;
+}
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Medium"), local("Roboto-Medium"), url("fonts/Roboto-Medium.ttf") format("truetype");
@@ -811,7 +815,7 @@ h4 { /* все заголовки категорий*/
 
 @media (max-width: 768px) {
   .biography-desc__quote_tablet{
-    display: contents;}
+    display: block;}
   
 
   
@@ -866,7 +870,7 @@ h4 { /* все заголовки категорий*/
   }
 
   .biography-desc__quote_tablet {
-    max-width: 400px;
+    max-width: 500px;
     font-family: "Bitter";
     font-weight: 300;
     font-size: 30px;
@@ -1217,7 +1221,7 @@ h4 { /* все заголовки категорий*/
 
 @media (max-width: 768px) {
   .strong-points-list__title {
-    font-family: "Bitter";
+    font-family: "Playfair Display";
     font-weight: 400;
     font-size: 46px;
   }
@@ -1323,8 +1327,7 @@ h4 { /* все заголовки категорий*/
 
 /* Стили для планшетной версии */
 @media (max-width: 768px) {
-  .biography-desc__quote,
-  .biography-desc__quote_mobile
+  .biography-desc__quote
    {
     display: none;
   }
@@ -1336,12 +1339,159 @@ h4 { /* все заголовки категорий*/
     font-weight: 300;
     font-size: 30px;
     line-height: 115%;
-    max-width: 400px;
+    max-width: 100%;
     text-align: left;
   }
 
   .biography-desc-text__tablet {
     margin-top: 20px;
   
+  }
+}
+
+
+@media (max-width: 768px) {
+ 
+
+  
+  .biography__img-container {
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .biography__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center; /* Центрируем обрезку */
+  }
+
+  /* Дополнительные корректировки для лучшего отображения */
+  .biography {
+    margin-top: 52px;
+  }
+  
+  .biography-text {
+    gap: 110px;
+  }
+  
+  .biography-desc-text__tablet {
+    margin-top: 52px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* Показать мобильную цитату и скрыть остальные */
+  .biography-desc__quote,
+  .biography-desc__quote_tablet {
+    display: none;
+  }
+  
+  .biography-desc__quote_mobile {
+    display: block;
+    font-family: "Bitter";
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 100%;
+    max-width: 450px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  
+ 
+  /* Текст Katya Mills в одну строку */
+  .biography-text__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 768px) {
+  .biography-desc__quote_tablet {
+    margin-bottom: 50px !important; /* Уменьшаем отступ снизу */
+  }
+  
+  .biography-text {
+    gap: 60px !important; /* Уменьшаем общий gap между элементами */
+  }
+}
+
+@media (max-width: 450px) {
+  /* Исправляем сдвиг влево */
+  body {
+    margin-left: 0;
+    padding-left: 0;
+    overflow-x: hidden;
+  }
+
+  .box__img{
+  display: none;
+}
+  
+  .box__img__mobile{
+  display: contents;
+}
+  
+  .container {
+    margin-left: 0;
+    padding-left: 15px; /* Добавляем отступ слева */
+    padding-right: 15px; /* Добавляем отступ справа */
+    width: calc(100% - 30px); /* Учитываем padding */
+  }
+  
+  /* Исправляем цитату для точного соответствия HTML */
+  .biography-desc__quote_mobile {
+    display: block;
+    font-family: "Bitter";
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.1; /* Уменьшаем межстрочный интервал */
+    max-width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    white-space: normal; /* Разрешаем переносы */
+    word-break: keep-all; /* Сохраняем слова целыми */
+  }
+  
+  /* Убираем лишние отступы у контейнеров */
+  .biography {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .biography-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .biography-text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Исправление для всех маленьких экранов */
+@media (max-width: 450px) {
+  main.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 30px);
+  }
+  
+  /* Убедимся, что хедер и футер тоже не сдвигаются */
+  header.container, 
+  footer.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
