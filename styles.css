@@ -27,7 +27,6 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
-
 body {
   line-height: 1;
 }
@@ -55,9 +54,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.box__img__mobile{
-  display: none;
-}
+
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Medium"), local("Roboto-Medium"), url("fonts/Roboto-Medium.ttf") format("truetype");
@@ -90,6 +87,9 @@ local("Bitter-Regular"),
 url("fonts/Bitter-Regular.ttf") format("truetype");
 font-weight: 400;
 }*/
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -754,9 +754,7 @@ h4 { /* все заголовки категорий*/
 }
 
 @media (max-width: 768px) {
-  .biography-desc__quote{
-    display:none;
-  }
+
   
   .biography-text__name {
     max-width: 525px;
@@ -1327,10 +1325,7 @@ h4 { /* все заголовки категорий*/
 
 /* Стили для планшетной версии */
 @media (max-width: 768px) {
-  .biography-desc__quote
-   {
-    display: none;
-  }
+
 .biography-desc__quote_tablet {
     display: block; 
     margin-top: 52px; 
@@ -1382,10 +1377,7 @@ h4 { /* все заголовки категорий*/
 
 @media (max-width: 450px) {
   /* Показать мобильную цитату и скрыть остальные */
-  .biography-desc__quote,
-  .biography-desc__quote_tablet {
-    display: none;
-  }
+
   
   .biography-desc__quote_mobile {
     display: block;
@@ -1427,14 +1419,6 @@ h4 { /* все заголовки категорий*/
     padding-left: 0;
     overflow-x: hidden;
   }
-
-  .box__img{
-  display: none;
-}
-  
-  .box__img__mobile{
-  display: contents;
-}
   
   .container {
     margin-left: 0;
@@ -1495,3 +1479,186 @@ h4 { /* все заголовки категорий*/
     margin-right: auto;
   }
 }
+
+
+/* Исправления для навигации на мобильных устройствах */
+@media (max-width: 450px) {
+  .nav__tablet {
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .nav__tablet a {
+    padding: 8px 12px !important;
+    font-size: 32px !important;
+    flex-shrink: 0;
+  }
+  
+  .header__nav-container {
+    padding-right: 10px !important;
+  }
+  
+  /* Скрываем desktop и tablet цитаты, показываем mobile */
+  
+  .biography-desc__quote_mobile {
+    display: block !important;
+    font-family: "Bitter";
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.1;
+    text-align: left;
+    margin: 20px 0;
+  }
+}
+
+/* Дополнительные исправления для очень маленьких экранов */
+@media (max-width: 380px) {
+  .nav__tablet a {
+    font-size: 28px !important;
+    padding: 6px 10px !important;
+  }
+}
+
+
+
+
+/* 1. Навигация - сдвиг влево */
+@media (min-width: 769px) {
+  body{
+    margin-top:-7px;
+  }
+  .header__nav-container {
+    margin-right: 55px;
+  }
+  
+  .nav__desktop {
+    gap: 45px;
+    padding-right: 5px;
+  }
+}
+
+/* 2. Biography - сдвиг цитаты */
+@media (min-width: 769px) {
+  .biography-desc__quote {
+    margin-left: -8px;
+    margin-bottom: -200px;
+    
+  }
+  
+  .biography-desc__quote::before {
+    margin-left: -15px;
+    
+  }
+}
+
+/* 3. Designers - уменьшение картинок (кроме первой) */
+@media (min-width: 769px) {
+  .designers-section__item:not(:first-child) .designers-item__img {
+    max-width: 335px;
+    height: 440px;
+  }
+  
+  /* Сдвигаем контейнер designers влево из-за уменьшенных картинок */
+  .designers-section {
+    margin-left: 15px;
+  }
+}
+
+/* 4. Testimonials - изменения */
+@media (min-width: 769px) {
+  /* Уменьшаем большую картинку */
+  .testimonials__img-container1 {
+    max-width: 451px;
+    height: 760px;
+  }
+  
+  .testimonials__img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Сдвигаем текст testimonials левее */
+  .testimonials__title {
+    margin-left: -2px;
+
+  }
+  
+  /* Сдвигаем цитату и картинку в правой части левее */
+  .testimonials__quote {
+    margin-left: -80px;
+  
+  }
+  
+  .testimonials__img-container2 {
+    margin-left: -80px;
+    
+  }
+  
+  /* Сдвигаем ссылки вправо вместе с уменьшенной картинкой */
+  .testimonials__link1,
+  .testimonials__link2,
+  .testimonials__link3 {
+    margin-left: 30px;
+    
+  }
+}
+
+/* 5. Strong points - сдвиги */
+@media (min-width: 769px) {
+  /* Сдвигаем заголовок strong points левее */
+  .strong-points-section__title {
+    margin-left: 140px;
+  
+  }
+  
+  /* Сдвигаем strengths и список вправо */
+  .strong-points-list {
+    margin-left: 35px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+  }
+
+}
+
+/* Добавьте этот код в конец файла styles.css */
+
+/* 1. Навигация - сдвиг текстов правее */
+@media (min-width: 769px) {
+  .nav__desktop a:nth-child(4) { /* Strong points */
+    margin-right: -10px;
+  }
+  .nav__desktop a:nth-child(1) { /* Strong points */
+    margin-right: 6px;
+  }
+  .nav__desktop a:nth-child(2) { /* Strong points */
+    margin-right: 8px;
+  }
+
+  .nav__desktop a:nth-child(3) { /* Strong points */
+    margin-right: 17px;
+  }
+}
+
+/* 2. Кнопка модального окна - сдвиг правее */
+@media (min-width: 769px) {
+  .modal {
+    margin-right: -20px;
+  }
+}
+
+/* 3. Biography - сдвиг текста Art Director выше и символа правее */
+@media (min-width: 769px) {
+
+  
+  .biography-desc__quote::before {
+    margin-left: 8px; 
+    
+    
+  }
+}
+
+
+
