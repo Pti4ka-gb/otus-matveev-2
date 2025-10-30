@@ -1628,7 +1628,7 @@ h4 { /* все заголовки категорий*/
 /* 1. Навигация - сдвиг текстов правее */
 @media (min-width: 769px) {
   .nav__desktop a:nth-child(4) { /* Strong points */
-    margin-right: -10px;
+    margin-right: -40px;
   }
   .nav__desktop a:nth-child(1) { /* Strong points */
     margin-right: 6px;
@@ -1660,5 +1660,55 @@ h4 { /* все заголовки категорий*/
   }
 }
 
+/* В разделе стилей для модального окна добавьте: */
+@media (min-width: 769px) {
+  .modal {
+    position: relative;
+    right: -30px; /* Сдвигаем кнопку вправо */
+  }
+  
+  /* Компенсируем сдвиг, чтобы навигация осталась на месте */
+  .nav-container__nav {
+    margin-right: 30px;
+  }
+}
+
+/* В разделе Biography добавьте или замените следующие стили */
+
+@media (min-width: 769px) {
+
+  
+  .biography-text__name {
+    margin-top: -7px; /* Добавляем отступ снизу для имени */
+  }
+  
+  .biography-desc__quote {
+    padding-top: 40px; /* Опускаем цитату ниже (было 22px) */
+  }
+  
+  .biography-desc__quote::before {
+    margin-top: 0px; /* Опускаем символ над цитатой ниже (было 20px) */
+  }
+  
+  .biography-desc-text__desktop {
+    margin-bottom: 0px; /* Поднимаем блок Art Director выше */
+  }
+}
+
+/* Для планшетной версии */
+@media (max-width: 768px) {
+  .biography-text {
+    gap: 80px; /* Уменьшаем расстояние между элементами (было 110px) */
+  }
+  
+  .biography-desc__quote_tablet {
+    margin-top: 30px; /* Опускаем цитату ниже (было 52px) */
+    margin-bottom: 30px; /* Уменьшаем отступ снизу (было 52px) */
+  }
+  
+  .biography-desc-text__tablet {
+    margin-top: 10px; /* Поднимаем блок Art Director выше (было 20px) */
+  }
+}
 
 
